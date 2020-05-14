@@ -18,7 +18,9 @@ function readCSVFile(e) {
 	reader.readAsText(file);
 }
 
-
+/*
+*	Responsible for creation of table
+*/
 function displayContents(contents) {
 	var element = document.getElementById('file-content');
 	// Split by content entry
@@ -60,34 +62,25 @@ function displayContents(contents) {
 			if(newVals[1] == currentWorker)
 			{
 				var oldVals = text[previousApp].split(',');
-
-				// Calculate time difference between old data entry and new data entry
-				currentDay = calculateTimeDifference(currentDay, previousApp, oldVals, newVals, tableInfo, workerData, k);
+				if(oldVals[1] == newVals[1]) {
+					// Calculate time difference between old data entry and new data entry
+					currentDay = calculateTimeDifference(currentDay, previousApp, oldVals, newVals, tableInfo, workerData, k);
+				}
 				
 				// update old entry to equal the new entry
-				previousApp = i;
-				
-				//console.log(newVals[0])
-				//console.log(newVals[1])
-				//console.log(newVals[2])
-				
-				//console.log(" ");
-				
+				previousApp = i;	
 			}
-		}
-		
+		}	
 	}
-	
-	
-	console.log(tableInfo);
-	console.log(workerData);
-	
+
 	populateTable(workerData, tableInfo);
 	
 }
 
+/*
+*	Calculates the difference in time in minutes between two data entries
+*/
 function calculateTimeDifference(currentDay, previousApp, oldVals, newVals, tableInfo, workerData, k) {
-	
 	
 	// Get Dates from old and new dates
 	var oldTime = oldVals[0].split(" ");
@@ -144,8 +137,13 @@ function calculateTimeDifference(currentDay, previousApp, oldVals, newVals, tabl
 *	Populates table with worker data
 */
 function populateTable(workerData, tableInfo) {
-	var table = document.getElementById("table")
-	
+	document.getElementById("tabletitle").innerHTML = "Table of Average Time (in minutes) Spent by Workers on a Given Application";
+	var table = document.getElementById("table");
+	var chartData = new Array(tableInfo[0].length+1);
+
+	// Format 2D array to work with drawChart function
+	generateChartData(chartData, tableInfo);
+
 	// Print top row of of dates
 	row = table.insertRow(0);
 	var cell = row.insertCell(0);
@@ -168,16 +166,16 @@ function populateTable(workerData, tableInfo) {
 			var cell1 = row.insertCell(k+1);
 			// Iterate and sum over all workers
 			for(var j = 0; j < workerData.length; j++) {
-				console.log(workerData[j][i][k])
 				sum += workerData[j][i][k];
 			}
 
 			// Take average of the workers data
 			cell1.innerHTML = Math.trunc(sum / 3);
+			chartData[k+1][i+1] = Math.trunc(sum / 3);
 		}
 	}
 	
-	drawChart(tableInfo);	
+	drawChart(chartData);	
 }
 
 
@@ -186,15 +184,8 @@ google.charts.load('current', {'packages':['bar']});
 /*
 *	Displays column chart on page
 */
-function drawChart(tableInfo) {
-	var data = google.visualization.arrayToDataTable([
-	['Date', 'Word', 'Outlook', 'Excel'],
-	[tableInfo[0][0], 122, 114, 80],
-	[tableInfo[0][1], 111, 127, 80],
-	[tableInfo[0][2], 106, 130, 80],
-	[tableInfo[0][3], 98, 111, 84],
-	[tableInfo[0][4], 99, 117, 87],
-	]);
+function drawChart(chartData) {
+	var data = google.visualization.arrayToDataTable(chartData);
 	
 	var options = {
 		chart: {
@@ -208,4 +199,22 @@ function drawChart(tableInfo) {
 	chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
+/*
+*	Formats chartData array to be accepted by drawChart Function
+*/
+function generateChartData(chartData, tableInfo) {
+	for(var i = 0; i < tableInfo[0].length + 1; i++) {
+		chartData[i] = new Array(0);
+	}
+	chartData[0].push("Date");
+	for(var i = 1; i < tableInfo[0].length+1; i++) {
+		chartData[i].push(tableInfo[0][i-1]);
+
+	}
+	for(var i = 1; i < tableInfo[1].length+1; i++) {
+		chartData[0].push(tableInfo[1][i-1]);
+	}
+}
+
+// Add listener for CSV input box
 document.getElementById('file-input').addEventListener('change', readCSVFile, false);
