@@ -1,0 +1,75 @@
+.menu {
+	float: left;
+	width: 15%;
+	background: #dee2e3;	
+}
+
+.divider {
+	border: 2px solid gray;
+}
+
+.item {
+	text-align:center;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	margin-top: 5%;
+	color: #276945;
+	
+}
+.content {
+	float: left
+	width: 85%;
+
+}
+
+#profilepic {
+    display: block;
+    width: 70%;
+}
+
+.leftbox {
+	float: left;
+	width: 40%;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+.rightbox {
+	float: left;
+	width: 30%;
+	margin-top: 2%;
+	#background: red;
+}
+#name {
+	font-size: 60px;
+	text-align: center;
+	color: #276945;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700
+	
+}
+
+.line {
+	 border: 4px solid gray;
+	 margin-bottom: 0;
+}
+
+
+.vl {
+	border-left: 8px solid gray;
+	height: 1000px;
+    float: right;
+}
+
+.sep {
+	border: 1px solid gray;
+}
+
+.aboutinfo {
+	float: left;
+	width: 75%;
+	margin-left: 2%;
+	#background: green;
+	margin-top: 2%;
+}
