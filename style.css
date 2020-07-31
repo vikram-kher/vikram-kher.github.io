@@ -25,21 +25,22 @@
 
 #profilepic {
     display: block;
-    width: 70%;
+    width: 100%;
 }
 
 .leftbox {
 	float: left;
-	width: 40%;
+	width: 30%;
 	margin-left: 2%;
 	margin-top: 2%;
+	background: green;
 }
 
 .rightbox {
 	float: left;
-	width: 30%;
+	width: 40%;
+	margin-left: 2%;
 	margin-top: 2%;
-	#background: red;
 }
 #name {
 	font-size: 60px;
@@ -72,4 +73,12 @@
 	margin-left: 2%;
 	#background: green;
 	margin-top: 2%;
+}
+
+.contact {
+	color: #276945;
+	font-size: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700
+
 }
