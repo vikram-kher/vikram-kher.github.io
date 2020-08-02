@@ -43,7 +43,7 @@
 	margin-top: 2%;
 }
 #name {
-	font-size: 4vw;
+	font-size: 50px;
 	text-align: center;
 	color: #276945;
 	font-family: 'Roboto', sans-serif;
@@ -58,7 +58,7 @@
 
 .vl {
 	border-left: 8px solid gray;
-	height: 100vh;
+	height: 86.9vh;
     float: right;
 }
 
@@ -75,7 +75,7 @@
 
 .contact {
 	color: #276945;
-	font-size: 2vw;
+	font-size: 30px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700
 }
@@ -83,3 +83,8 @@
 a {
   font-size: 1.5vw;
 }
+
+p {
+	font-size: 15px;
+}
+
