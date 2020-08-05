@@ -1,0 +1,11 @@
+# jemdoc: menu{MENU}{projects.html}
+= Projects
+
+== Gladeo IOS App
+As a developer at USC's premier philanthropy Club, [https://www.ctcusc.com/ Code the Change], I had the amazing opportunity to work with the non-profit organization [https://gladeo.org/ Gladeo]. Gladeo specializes in providing career mentorship services to underprivileged students. Our team of seven developers and two designers were tasked with creating an app for Gladeo which young professionals could use to record informative, career advice videos for Gladeo's audience. The videos would then be automatically uploaded to Gladeo's YouTube channel.
+
+Using Express, I was responsible for a large portion of the app's backend, including account creation and password-reset features. Additionally, I was responsible for using YouTube's API to enable the automatic uploading of videos to Gladeo's YouTube channel.
+
+~~~
+Github: [https://github.com/ctcusc/gladeo Gladeo Code]
+~~~
