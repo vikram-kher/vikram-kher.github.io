@@ -3,26 +3,28 @@
 
 ~~~
 {}{img_left}{profilepicture.jpg}{alt text}{220}{250}{}
-Undergraduate, Junior\n
+Undergraduate, Senior\n
 [https://viterbischool.usc.edu/ Viterbi School of Engineering]\n
 Email: \v + lastname@usc.edu \n
 ~~~
 
 == About me
-I am an undergraduate at USC's Viterbi School of Engineering double majoring in Computer Science (BS) and Applied Math (BA). I love algorithm design, complexity theory, and russian literature. 
-
-Currently, I am looking for summer research opportunities for 2021. 
+I am an undergraduate at USC's Viterbi School of Engineering double majoring in Computer Science (BS) and Applied Math (BA). I love Algorithm Design, Complexity Theory, and Russian Literature. I expect to graduate in the Fall of 2022. 
 
 == Research
-During the Summer and Fall of 2020, I had the great opportunity to work as an undergraduate researcher at Hughes Professor [https://viterbi.usc.edu/directory/faculty/Oberai/Assad Assad Oberai's] Computation and Data Driven Discovery Group ([https://sites.usc.edu/oberai/ CD3]). Our project, entitled "Machine Learning Based Predictors for COVID-19 Disease Severity", resulted in paper which is currently available as a preprint [https://www.researchsquare.com/article/rs-108301/v1 here].
+Since the Spring of 2021, I have been working with Professor [http://david-kempe.com/ David Kempe] on proving distortion bounds in the field of Metric Voting.
 
-This Spring 2021 I will be working with Professor [http://david-kempe.com/ David Kempe] on proving distortion bounds in the field of Metric Voting.
+During the Summer and Fall of 2020, I had the great opportunity to work as an undergraduate researcher at Hughes Professor [https://viterbi.usc.edu/directory/faculty/Oberai/Assad Assad Oberai's] Computation and Data Driven Discovery Group ([https://sites.usc.edu/oberai/ CD3]). I co-authored a paper, entitled "Machine Learning Based Predictors for COVID-19 Disease Severity", based on this work, which was published in the Journal of Scientific Reports. The paper can be found [https://www.nature.com/articles/s41598-021-83967-7 here].
+
+
 
 My research interests include 
 - Computational Complexity Theory
+- Analysis of Social Choice Mechanisms
 
-== Awards
+== Selected Awards
+- The Honor Society of Phi Kappa Phi's 2021 Summer Research Scholarship ($1,000)
 - W.V.T. Rusch Undergraduate Engineering Honors Program
 - Best Presentation at Viterbi Summer 2020 Research Showcase (Voted by Faculty)
-- Viterbi Dean's List (2018-2019)
+- Viterbi Dean's List (2018-2021)
 - USC Academic Achievement Award (2020)
